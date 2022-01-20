@@ -397,7 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 143470769}
   pointB: {fileID: 1298191816}
-  percent: 1
+  percent: 0
 --- !u!65 &1721758260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -468,8 +468,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721758258}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -5, y: 6, z: -3}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 10, y: 5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
