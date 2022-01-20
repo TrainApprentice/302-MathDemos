@@ -23,20 +23,28 @@ void draw(){
   // Store the time in seconds for movement
   float time = (float)millis()/1000;
   
-  // Set up the red electron's movement
+  // Set up the electrons' movement
   elRed.x = 150 * cos(time * 1.5);
   elRed.y = 50 * sin(time * 1.5);
   
-  // Convert the red electron's position into polar coordinates
-  float angle = atan2(elRed.y, elRed.x);
-  float mag = sqrt(elRed.x * elRed.x + elRed.y * elRed.y);
+  elBlue.x = 150 * cos(time * 2);
+  elBlue.y = 50 * sin(time * 2);
   
+  elGreen.x = 150 * cos(time * 1.75);
+  elGreen.y = 50 * sin(time * 1.75);
+  
+  // Convert the blue and green electrons' position into polar coordinates
+  float angleB = atan2(elBlue.y, elBlue.x);
+  float magB = sqrt(elBlue.x * elBlue.x + elBlue.y * elBlue.y);
+  
+  float angleG = atan2(elGreen.y, elGreen.x);
+  float magG = sqrt(elGreen.x * elGreen.x + elGreen.y * elGreen.y);
   // Set the other electrons based on the red electron
-  elBlue.x = mag * cos(angle + radians(60));
-  elBlue.y = mag * sin(angle + radians(60));
+  elBlue.x = magB * cos(angleB + radians(60));
+  elBlue.y = magB * sin(angleB + radians(60));
   
-  elGreen.x = mag * cos(angle - radians(60));
-  elGreen.y = mag * sin(angle - radians(60));
+  elGreen.x = magG * cos(angleG - radians(60));
+  elGreen.y = magG * sin(angleG - radians(60));
 
   // Draw all electrons
   noStroke();
