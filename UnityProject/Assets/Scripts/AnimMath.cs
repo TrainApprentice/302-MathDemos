@@ -15,7 +15,7 @@ public static class AnimMath
         return (b - a) * percent + a;
     }
 
-    public static Vector3 Lerp(Vector3 a, Vector3 b, float percent, bool allowExtrapolation = false)
+    public static Vector3 Lerp(Vector3 a, Vector3 b, float percent, bool allowExtrapolation = true)
     {
         if (!allowExtrapolation)
         {
